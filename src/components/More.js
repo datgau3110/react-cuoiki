@@ -153,11 +153,85 @@ class More extends Component {
                 className="btn btn-outline-primary"
                 data-toggle="modal"
                 data-target="#exampleModal"
-                data-whatever="@mdo">
+                data-whatever="@mdo"
+              >
                  Your feedback
                 
               </button>
-              
+              <div
+                className="modal fade"
+                id="exampleModal"
+                tabIndex={-1}
+                role="dialog"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div className="modal-dialog">
+                  <div className="modal-content">
+                    <div className="modal-header">
+                      <h4 className="text-center">
+                        Your feedback is important to us !
+                      </h4>
+                      <button
+                        type="button"
+                        className="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">
+                          <i className="fas fa-times-circle closeBtn"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <div className="modal-body text-left">
+                      <form>
+                        <div className="form-group">
+                          <label
+                            htmlFor="recipient-name"
+                            className="col-form-label "
+                          >
+                            Name :
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="recipient-name"
+                          />
+                        </div>
+                        <div className="form-group">
+                          <label
+                            htmlFor="message-text"
+                            className="col-form-label"
+                          >
+                            Message:
+                          </label>
+                          <textarea
+                            className="form-control"
+                            id="message-text"
+                            defaultValue={""}
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <div className="modal-footer">
+                      <button
+                        type="button"
+                        className="btn btn-danger"
+                        data-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-primary"
+                        data-dismiss="modal"
+                      >
+                        <i class="far fa-paper-plane"></i> Send
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
